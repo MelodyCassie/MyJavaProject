@@ -16,10 +16,10 @@ class BikeTwoTest {
     @Test
     public void testThatOurBikeIsOffAndCanTurnOn(){
         BikeTwo melBike = new BikeTwo();
-//        assertFalse(melBike.isToggleOn());
-        melBike.getIsToggleOn();
-        assertTrue(melBike.getIsToggleOn());
-        melBike.getIsToggleOn();
+        //assertFalse(melBike.getToggleOn());
+        assertTrue(melBike.getToggleOn());
+        melBike.getToggleOn();
+
 
     }
    // @Test

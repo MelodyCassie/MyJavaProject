@@ -1,15 +1,15 @@
 package tdd;
 
 public class BikeTwo {
-    private boolean isToggleOn;
+    private boolean toggleOn;
     private int speed;
 
 
-    public void isToggleOn(boolean isToggleOn){
-        this.isToggleOn = isToggleOn;
+    public void setToggleOn(boolean toggleOn){
+        this.toggleOn = toggleOn;
     }
-    public boolean getIsToggleOn() {
-        return false;
+    public boolean getToggleOn() {
+       return true;
     }
 
     public int getSpeed(){

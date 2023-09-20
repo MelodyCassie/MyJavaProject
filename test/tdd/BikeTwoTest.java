@@ -16,20 +16,20 @@ class BikeTwoTest {
     @Test
     public void testThatOurBikeIsOffAndCanTurnOn(){
         BikeTwo melBike = new BikeTwo();
-        //assertFalse(melBike.getToggleOn());
+        assertFalse(melBike.getToggleOn());
+        melBike.turnOn();
         assertTrue(melBike.getToggleOn());
-        melBike.getToggleOn();
+
 
 
     }
-   // @Test
-   //public void testThatOurBikeCanTurnOff(){
-     //   BikeTwo okada = new BikeTwo();
-     //   okada.toggleOn();
-       // assertTrue(okada.isOn());
+    @Test
+    public void testThatOurBikeCanTurnOff(){
+         BikeTwo melBike = new BikeTwo();
+         assertFalse(melBike.getToggleOn());
+         melBike.turnOn();
 
-       // okada.toggleOn();
-      //  assertFalse(okada.isOn());
+
 
     }
 //
@@ -146,4 +146,4 @@ class BikeTwoTest {
 //        assertEquals(41,actual);
 //     }
 
-//}
+}

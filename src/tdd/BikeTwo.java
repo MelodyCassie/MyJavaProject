@@ -2,14 +2,17 @@ package tdd;
 
 public class BikeTwo {
     private boolean toggleOn;
+    private boolean isOn;
     private int speed;
 
-
-    public void setToggleOn(boolean toggleOn){
-        this.toggleOn = toggleOn;
-    }
     public boolean getToggleOn() {
-       return true;
+        if (!isOn) {
+            isOn = true;
+        } return false;
+
+    }
+    public boolean turnOn() {
+        return isOn = true;
     }
 
     public int getSpeed(){
@@ -55,6 +58,8 @@ public class BikeTwo {
     public int plusFourPlus(int input, int plusFourPlus){
         return input + plusFourPlus;
     }
+
+
 }
 
 

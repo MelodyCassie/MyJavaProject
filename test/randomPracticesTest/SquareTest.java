@@ -1,6 +1,7 @@
-package randomPractices;
+package randomPracticesTest;
 
 import org.junit.jupiter.api.Test;
+import randomPractices.Square;
 
 import static org.junit.jupiter.api.Assertions.*;
 

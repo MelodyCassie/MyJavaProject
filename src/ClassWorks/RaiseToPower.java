@@ -1,3 +1,5 @@
+package ClassWorks;
+
 import java.util.Scanner;
 
 public class RaiseToPower {
@@ -12,8 +14,8 @@ public class RaiseToPower {
 
         int result = 0;
 
-        for (int count = 1; count <= exponential; count++) {
-            result = (exponential * base);
+        for (int count = 0; count <= exponential; count++) {
+            result = base * count;
         }
 
         System.out.println(result);

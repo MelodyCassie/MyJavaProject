@@ -1,4 +1,4 @@
-package ClassWork;
+package tdd;
 
 class ForLoopNestTest {
     private static int printStars(int numberOfStars) {

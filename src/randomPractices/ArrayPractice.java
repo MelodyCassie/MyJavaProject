@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class ArrayPractice {
     public static void main(String[] args) {
-        //String car = "Lamorghini";
+        String[] carss = new String[2];
+        carss[0] = "Bugatti";
+        carss[1] = "Camry";
+        System.out.print(carss[1]);
+
         String[] cars = {"Lamborghini", "porsche", "Tesla", "Ferrari", "Toyota"};
-        //cars[4] = "Bugatti";
         System.out.println(cars[3]);
     }
 }

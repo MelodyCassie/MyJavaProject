@@ -4,21 +4,15 @@ import java.util.Scanner;
 
 public class TaskOne {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        int index = 1;
-        int sum = 0;
-        while( index <= 10){
-            System.out.print("ENTER YOUR SCORE: ");
-            int score = scanner.nextInt();
+        int addition = 0;
+        for(int count = 0; count < 10 ; count++){
+            System.out.println("Enter score: " + (count +1));
+            int scores = input.nextInt();
 
-            sum = index + score;
-            index++;
+            addition += scores;
         }
-
-        System.out.println(sum);
+        System.out.println("The sum of the scores entered are: " + addition);
     }
-
-
-
 }

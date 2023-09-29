@@ -4,18 +4,22 @@ import java.util.Scanner;
 
 public class TaskEight {
     public static void main(String[] args) {
-        int total = 0;
-        for(int count = 1; count <= 10;){
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter a valid score: ");
-            int score = input.nextInt();
-            total = 0;
-            if(score <= 100){
-                total += score;
-                count++;
+        Scanner scanner = new Scanner(System.in);
+
+        int addition = 0;
+        int totalScores = 10;
+        System.out.println("Enter only 10 scores: ");
+
+        for(int count = 1; count < totalScores ; count++){
+            System.out.println("Enter score:  " + count  + (count + 1));
+            int scores = scanner.nextInt();
+
+            if(scores >= 1 && scores <= 10){
+                addition += scores;
             }
+
         }
-        System.out.println(total);
+        System.out.println(addition);
     }
     }
 

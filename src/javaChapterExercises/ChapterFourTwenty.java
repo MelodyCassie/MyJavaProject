@@ -14,13 +14,14 @@ public class ChapterFourTwenty {
 
     if(earnings <= 30000){
         double totalTax = earnings * 0.15;
+
+        System.out.println(name + "'s total tax is: $" + totalTax);
     }
      else {
         double totalTax = earnings * 0.20;
 
 
         System.out.println(name + "'s total tax is: $" + totalTax);
-        scanner.nextLine();
      }
    }
 }

@@ -6,8 +6,8 @@ import java.util.Collections;
 
 public class ReverseList {
     public static List<Integer> reverseList(List<Integer> list) {
-        List<Integer> reversedList = new ArrayList<>(list); // Create a new list to store the reversed elements
-        Collections.reverse(reversedList); // Use the Collections.reverse method to reverse the list
+        List<Integer> reversedList = new ArrayList<>(list);
+        Collections.reverse(reversedList);
         return reversedList;
     }
 

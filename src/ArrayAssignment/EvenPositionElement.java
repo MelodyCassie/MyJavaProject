@@ -14,4 +14,4 @@ public class EvenPositionElement {
         printEvenPositionElements(myList);
     }
 }
-}
+

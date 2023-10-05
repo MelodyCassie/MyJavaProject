@@ -3,7 +3,7 @@ package ArrayAssignment;
 import java.util.List;
 
 public class PrintOddFromAList {
-    public static void printOddPositionElements(List<Integer> list {
+    public static void printOddPositionElements(List<Integer> list) {
 
         for (int i = 0; i < list.size(); i += 2) {
             System.out.println(list.get(i));

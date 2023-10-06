@@ -114,7 +114,7 @@ public class Nokia3310 {
                         """);
                 int callRegister = input.nextInt();
                 if (callRegister == 1) {
-                    System.out.print("You've have millions of contacts on your register");
+                    System.out.print("You have millions of contacts on your register");
                 }
                 if (callRegister == 2) {
                     System.out.print("you have millions of received calls,you are a celebrity you know!!!");

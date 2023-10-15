@@ -1,4 +1,4 @@
-package ArrayAssignment;
+package Assignments;
 
 public class StringPalindrome {
     public static boolean isPalindrome(String s) {

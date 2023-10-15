@@ -1,7 +1,4 @@
-package ArrayAssignment;
-
-import java.util.ArrayList;
-import java.util.List;
+package Assignments;
 
 public class LargestElement{
     public static int findLargestElement(int[] numbers) {

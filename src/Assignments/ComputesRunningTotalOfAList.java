@@ -1,4 +1,4 @@
-package ArrayAssignment;
+package Assignments;
 import java.util.ArrayList;
 import java.util.List;
 public class ComputesRunningTotalOfAList {

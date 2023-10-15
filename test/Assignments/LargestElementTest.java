@@ -1,4 +1,4 @@
-package ArrayAssignment;
+package Assignments;
 
 import org.junit.jupiter.api.Test;
 

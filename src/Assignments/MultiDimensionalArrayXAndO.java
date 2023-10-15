@@ -1,4 +1,4 @@
-package ArrayAssignment;
+package Assignments;
 
 public class MultiDimensionalArrayXAndO {
     public static void main(String[] args) {

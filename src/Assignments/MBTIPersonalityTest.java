@@ -21,90 +21,51 @@ public class MBTIPersonalityTest {
 
 
         String[] questionsToAsk = {
-                "Do you prefer: \nA) Quiet thoughtful time alone ? \nB) Active energetic time with other people person? ",
+                "Do you prefer: \nA) Quiet thoughtful time alone ? \nB) Active energetic time with other people person? " ,
 
                 "I am described as: \nA) Reserved \nB) Outgoing" ,
 
-                "In a group: A) i try to find a quiet corner? \nB) I like to draw attention to myself? " ,
+                "In a group: \nA) i try to find a quiet corner? \nB) I like to draw attention to myself? " ,
 
-                "i work best with: A) Abstract ideas \nB) Concrete facts ",
+                "i work best with: \nA) Abstract ideas \nB) Concrete facts " ,
 
-                "My approach is to: A) Look at the new picture \nB) Organise the information step by step ",
+                "My approach is to: \nA) Look at the new picture \nB) Organise the information step by step " ,
 
-                "I tend to value: A) The familiar \nB) The new " ,
+                "I tend to value: \nA) The familiar \nB) The new " ,
 
-                "I tend to adopt a: A) A systematic approach \nB) A creative approach " ,
+                "I tend to adopt a: \nA) A systematic approach \nB) A creative approach " ,
 
-                        "I work best with: A) Details and practical knowledge " +
-                        "                  B) Ideas and possibilities " +
+                "I work best with: \nA) Details and practical knowledge \nB) Ideas and possibilities " ,
 
-                        "I am seen as more of a: A) Listener " +
-                        "                        B) Talker " +
+                "I am seen as more of a: \nA) Listener \n B) Talker " ,
 
-                        "In discussions i tend to: A) Get involved straight away " +
-                        "                          B) Take more of a back seat initially " +
+                "In discussions i tend to: \nA) Get involved straight away \nB) Take more of a back seat initially " ,
 
-                        "I am described as: A) Outgoing " +
-                        "                   B) Reserved " +
+                "I am described as: \nA) Reserved \nB) Outgoing " ,
 
-                        "I prefer: A) Meeting new people " +
-                        "          B) Being alone or with ne other person whom i know well " +
+                "I prefer: \nA) Meeting new people \nB) Being alone or with ne other person whom i know well " ,
 
-                        "I am: A) Forward thinking " +
-                        "      B) Concrete facts " +
+                "I am: \nA) Forward thinking \nB) Concrete facts " ,
 
-                        "I prefer: A) Discussing a new unconsidered issue with a group " +
-                        "          B) Considering issues in my mind, then sharing the result with others " +
+                "I prefer: \nA) Discussing a new unconsidered issue with a group \nB) Considering issues in my mind, then sharing the result with others " ,
 
-                        "I tend to adopt: A) A systematic approach " +
-                        "                 B) A creative approach " +
+                "I tend to adopt: \nA) A systematic approach \nB) A creative approach " ,
 
-                        "I have: A) My feet on the ground " +
-                        "        B) My head in the future " +
+                "I have: \nA) My head in the future  \nB) My feet on the ground " ,
 
-                        "I prefer: A) Trying to think of a new methods of doing tasks " +
-                        "          B) Using known effective methods of doing tasks " +
+                "I prefer: \nA) Using known effective methods of doing tasks \nB) Trying to think of a new methods of doing tasks " ,
 
-                        "I tend to prefer: A) Original thought " +
-                        "                  B) Factual Information " +
+                "I tend to prefer: \nA) Original thought \nB) Factual Information " ,
 
-                        "My focus tends to be: A) The welfare of the people " +
-                        "                      B) What needs to be done " +
+                "My focus tends to be: \nA) The welfare of the people \nB) What needs to be done " ,
 
-                        "I prefer: A) Helping others make logical decisions " +
-                        "          B) Helping others explore their feelings "
-
-        };
-        String[] choices = {
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)" +
-                        "A) or B)"
+                "I prefer: \nA) Helping others make logical decisions \nB) Helping others explore their feelings "
         };
 
         for (int j = 0; j < 20; j++) {
-            System.out.print("Question " + (j + 1) + " " + questionsToAsk[j]);
-            System.out.println(choices[j]);
+            System.out.print("Question " + (j + 1) + ":" + questionsToAsk[j]);
 
-
-
-                char answer = scanner.next().toUpperCase().charAt(0);
+            char answer = Character.toUpperCase(scanner.next().charAt(0));
 
                 if (answer == 'A' || answer == 'B'){
                     answers[j] = answer;
@@ -112,18 +73,32 @@ public class MBTIPersonalityTest {
                 else{
                     System.out.println("""
                             Expected A or B as your response ...
-                                                    I know that is an error...
-                                                    pls,try again.
+                                        I know that is an error...
+                                        pls,try again.
                             """);
                     j--;
                 }
-
-
         }
+    }
 
-
-
-
+    public static String determineThePersonality(char[] answers){
+        int ISTJCount = 0;
+        int ISFJCount = 0;
+        int INTJCount = 0;
+        int INFJCount = 0;
+        int ISTPCount = 0;
+        int ISFPCount = 0;
+        int INFPCount = 0;
+        int INTPCount = 0;
+        int ESTPCount = 0;
+        int ESFPCount = 0;
+        int ENFPCount = 0;
+        int ENTPCount = 0;
+        int ESTJCount = 0;
+        int ESFJCount = 0;
+        int ENFJCount = 0;
+        int ENTJCount = 0;
+        return null;
     }
 
 }

@@ -1,6 +1,6 @@
 package tdd;
 
-import randomPractices.Power;
+import MyRandomPractices.Power;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

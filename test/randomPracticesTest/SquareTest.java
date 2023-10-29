@@ -1,7 +1,7 @@
 package randomPracticesTest;
 
 import org.junit.jupiter.api.Test;
-import randomPractices.Square;
+import MyRandomPractices.Square;
 
 import static org.junit.jupiter.api.Assertions.*;
 

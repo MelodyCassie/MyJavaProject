@@ -23,7 +23,7 @@ public class ArrayOfNumbersRemoveDuplicates {
             count++;
 
         }
-        }
+    }
     return array;
     }
 

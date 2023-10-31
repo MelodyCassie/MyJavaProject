@@ -105,12 +105,22 @@ public class ArrayIdeas {
     //System.out.println("The even numbers from the array are : " + Arrays.toString(evenNumbers));
     //this is used in the psvm part to wrap the variable holding the result to an array.
 
+    //OR YOU CAN USE THIS
+    //return commonElements.stream()
+            //.mapToInt(Integer::intValue)
+                            // .toArray();  TO CHANGE TO ARRAY
 
 
 
 
-    //While Integer.MIN_VALUE is a common choice for initializing secondLargest because it's a well-understood constant for
-    // integers, you can use other values as well depending on the specific requirements of your code. Here are a few alternatives:
+
+
+
+
+
+//While Integer.MIN_VALUE is a common choice for initializing secondLargest because it's a well-understood constant for
+    // integers, you can use other values as well depending on the specific requirements of your code. Here are a few
+    // alternatives:
     //
     //Negative Infinity: You can use Double.NEGATIVE_INFINITY if you're working with floating-point numbers, like double.
     //
@@ -145,5 +155,37 @@ public class ArrayIdeas {
             }
         }
     }
+
+    // public static int[] bubbleSort(int[] numbers) {
+    //Here, you define the bubbleSort method, which takes an array of integers as input and returns an array of integers.
+    //        int n = numbers.length;
+
+    //This line stores the length of the input array (numbers) in the variable n.
+
+    //        int[] sorted = Arrays.copyOf(numbers, n);
+    //This creates a copy of the numbers array using Arrays.copyOf(). It ensures that the original array remains unaltered
+    // during the sorting process.
+
+    //        for (int i = 0; i < n - 1; i++) {
+    //This is the outer loop, which iterates through the array. The variable i represents the current pass through the array.
+    //            for (int j = 0; j < n - i - 1; j++) {
+    //This is the inner loop, which iterates through the elements within the current pass. The variable j represents the current
+    // element being compared.
+    //                if (sorted[j] > sorted[j + 1]) {
+    //This condition checks if the current element is greater than the next element. If true, it means that the two elements are
+    // out of order and need to be swapped.
+
+    //                    int temp = sorted[j];
+    //                    sorted[j] = sorted[j + 1];
+    //                    sorted[j + 1] = temp;
+    //If the condition is met, these lines swap the elements. temp is used as a temporary variable to facilitate the swap.
+    //       }
+    //      }
+    //    }
+    //These closing braces indicate the end of the inner and outer loops, completing the Bubble Sort algorithm.
+    //        return sorted;
+    //This line returns the sorted array as the result of the bubbleSort method.
+
+
 
 }

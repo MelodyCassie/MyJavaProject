@@ -55,7 +55,7 @@ public class PizzaApp {
                                 int largePizzaBoxes = (totalSlicesNeeded + largePizzaSlices - 1) / largePizzaSlices;
                                 int remainingSlices = (largePizzaBoxes * largePizzaSlices) - totalSlicesNeeded;
 
-                                System.out.println("You will need about " + largePizzaBoxes + " boxes of pizza. \n");
+                                System.out.println("You will need about " + largePizzaBoxes +" large boxes of pizza. \n");
                                 System.out.println("Approximately " + remainingSlices + " slices of pizza will remain.");
                                 break;
                             }
@@ -97,7 +97,7 @@ public class PizzaApp {
                                 int mediumPizzaBoxes = (totalSlicesNeeded + mediumPizzaSlices - 1) / mediumPizzaSlices;
                                 int remainingSlices = (mediumPizzaBoxes * mediumPizzaSlices) - totalSlicesNeeded;
 
-                                System.out.println("You will need about " + mediumPizzaBoxes + " boxes of pizza. \n");
+                                System.out.println("You will need about " + mediumPizzaBoxes +" medium boxes of pizza. \n");
                                 System.out.println("Approximately " + remainingSlices + " slices of pizza will remain.");
                                 break;
                             }
@@ -139,7 +139,7 @@ public class PizzaApp {
                                 int SmallPizzaBoxes = (totalSlicesNeeded + smallPizzaSlices - 1) / smallPizzaSlices;
                                 int remainingSlices = (SmallPizzaBoxes * smallPizzaSlices) - totalSlicesNeeded;
 
-                                    System.out.println("You will need about " + SmallPizzaBoxes + " boxes of pizza. \n");
+                                    System.out.println("You will need about " + SmallPizzaBoxes +" small boxes of pizza. \n");
                                     System.out.println("Approximately " + remainingSlices + " slices of pizza will remain.");
                                     break;
                             }

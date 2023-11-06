@@ -19,8 +19,8 @@ public class AirplaneRunwayLenght {
         double speedMultiply = speed * speed;
         double accelerateTimes = accelerate * times;
 
-        double lenght = speedMultiply / accelerateTimes;
+        double length = speedMultiply / accelerateTimes;
 
-        System.out.println("THE MINIMUM RUNWAY LENGTH OF THE AIRPLANE IS: " +  lenght);
+        System.out.println("THE MINIMUM RUNWAY LENGTH OF THE AIRPLANE IS: " +  length);
     }
 }

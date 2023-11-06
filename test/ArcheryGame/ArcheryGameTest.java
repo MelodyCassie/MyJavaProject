@@ -1,4 +1,4 @@
-package archeryGame;
+package ArcheryGame;
 
 import org.junit.jupiter.api.Test;
 

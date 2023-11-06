@@ -1,4 +1,4 @@
-package archeryGame;
+package ArcheryGame;
 
 import java.security.SecureRandom;
 

@@ -1,6 +1,6 @@
-package archeryGame;
+package ArcheryGame;
 
-import static archeryGame.ArcheryGame.generateScore;
+import static ArcheryGame.ArcheryGame.generateScore;
 
 public class Player {
     private int id;

@@ -9,6 +9,6 @@ public class Card {
         this.suit = suit;
     }
     public String toString(){
-        return face + " of " +suit;
+        return face + " of" +suit;
     }
 }

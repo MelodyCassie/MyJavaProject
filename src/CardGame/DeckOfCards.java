@@ -13,7 +13,6 @@ public class DeckOfCards {
         String[] faces = {"Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"}  ;
 
-
         for (int count = 0; count < deck.length; count++){
             deck[count] = new Card(faces[count % 13], suits[count / 13]);
         }
@@ -39,3 +38,4 @@ public class DeckOfCards {
         }
     }
 }
+

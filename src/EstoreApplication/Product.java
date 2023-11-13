@@ -3,14 +3,19 @@ public class Product {
     private int productId;
     private String productName;
     private double price;
+    private String productDescription;
 
     private ProductType productType;
+    private String productCategory;
 
-    public Product(int productId, String productName, double price, ProductType productType){
+    public Product(int productId, String productName, double price, ProductType productType,String productDescription,String productCategory){
         this.productId = productId;
         this.productName = productName;
         this.price = price;
         this.productType = productType;
+        this.productDescription = productDescription;
+        this.productCategory = productCategory;
+
     }
     public void setProductId(int productId){
         this.productId = productId;
@@ -35,6 +40,18 @@ public class Product {
     }
     public ProductType productType(){
         return productType;
+    }
+    public void setProductDescription(String productDescription){
+        this.productDescription = productDescription;
+    }
+    public String getProductDescription(){
+        return productDescription;
+    }
+    public void setProductCategory(String productCategory){
+        this.productCategory = productCategory;
+    }
+    public String getProductCategory(){
+        return productCategory;
     }
 
 

@@ -9,7 +9,7 @@ public class Items {
         this.product = product;
         this.quantity = quantity;
     }
-    public void setProduct(Product product){
+    public void setProduct(Product product){ 
         this.product = product;
     }
     public Product getProduct(){

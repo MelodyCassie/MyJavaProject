@@ -11,7 +11,6 @@ public class MakingADifferenceFour {
 
         int encryptionResult = encrypt(fourDigitInput);
 
-
         System.out.println("Encrypted Result: " + encryptionResult);
 
     }
@@ -42,6 +41,6 @@ public class MakingADifferenceFour {
         digit4 = (digit4 - 7 + 10) % 10;
 
         return decryptedData;
+
     }
 }
-

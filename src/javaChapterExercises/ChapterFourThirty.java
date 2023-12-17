@@ -8,16 +8,23 @@ public class ChapterFourThirty {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter length of the base of a triangle");
-        int base = scanner.nextInt();
+        int baseLength = scanner.nextInt();
 
-        while (base < 1 || base > 10){
+
+
+        while (baseLength < 1 || baseLength > 10){
             System.out.println("Length of triangle should be between 1 - 10.\n Try Again...");
-            base = scanner.nextInt();
+            baseLength = scanner.nextInt();
         }
 
-        for(int i = 0; i <= base; i++){
-            System.out.println(base % 2  == 0 ?"*":"****");
-        }
+        for(int i = 0; i <= baseLength; i++) {
+            for (int j = 0; j < i - 1; j++) {
+                System.out.print("*");
+                System.out.print(" ");
 
+            }
+
+            System.out.println();
+        }
     }
 }

@@ -2,11 +2,10 @@ package BankPackage;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BankTest extends Account {
+class BankTest{
     Bank myBank;
     @BeforeEach
     void setUp (){

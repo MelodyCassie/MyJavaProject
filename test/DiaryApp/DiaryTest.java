@@ -3,7 +3,6 @@ package DiaryApp;
 import DiaryApp.exceptions.EmptyInputError;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 

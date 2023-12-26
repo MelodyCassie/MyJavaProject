@@ -1,11 +1,10 @@
 package MyArrayPractice;
 
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CommonElementInArraysTest extends Account {
+class CommonElementInArraysTest {
     @Test
     public void commonElementTest(){
         int[] array1 = {10, 20, 30, 40, 50};

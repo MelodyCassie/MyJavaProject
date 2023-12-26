@@ -4,11 +4,10 @@ import BankPackage.exceptions.InvalidAmountError;
 import BankPackage.exceptions.PinError;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AccountTest extends Account {
+class AccountTest {
     BankPackage.Account account ;
 
     @BeforeEach

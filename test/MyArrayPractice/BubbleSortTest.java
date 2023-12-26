@@ -1,11 +1,10 @@
 package MyArrayPractice;
 
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BubbleSortTest extends Account {
+class BubbleSortTest {
     @Test
     public void bubbleSortTest(){
         int[] numbers = {64, 34, 25, 12, 22, 11, 90};

@@ -1,11 +1,10 @@
 package ClassWorks;
 
 import org.junit.jupiter.api.Test;
-import tdd.Account;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BeautifyStringsTest extends Account {
+class BeautifyStringsTest  {
     @Test
     public void testThatFullStopCanBeAdded(){
         String result = BeautifyStrings.addFullStop("ziri");

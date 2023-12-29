@@ -3,7 +3,7 @@ package TicTacToeGame;
 public enum BoardState {
     EMPTY,
     X,
-    O
+    Empty, O
 
 
 

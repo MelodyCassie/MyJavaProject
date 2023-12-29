@@ -1,88 +1,108 @@
 package TicTacToeGame;
-
-import TicTacToeGame.exceptions.InvalidMoveException;
-
+import static TicTacToeGame.BoardState.*;
 public class TicTacToeBoard {
-    enum BoardState{
-        EMPTY,X,O
-    }
-    private BoardState[][] boardStates ;
-    private BoardState currentPlayer;
-
+    private final BoardState[][] boardSurface;
     public TicTacToeBoard(){
-        boardStates = new BoardState[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                boardStates[i][j] = BoardState.EMPTY;
-            }
-        }
-        currentPlayer = BoardState.X;
+        boardSurface = new BoardState[][]{{Empty,Empty,Empty}, {Empty,Empty,Empty}, {Empty,Empty,Empty}};
     }
-    public void displayBoard() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(boardStates[i][j] + " ");
+    public void displayBoardSurface(){
+        for(BoardState[] boardStates : boardSurface){
+            System.out.println(" | ");
+            for(int i = 0; i < boardSurface.length; i++){
+                System.out.print(boardStates[i]);
+                System.out.print(" | ");
+
             }
+            System.out.println();
             System.out.println();
         }
     }
-
-
-
-    public void makeMove(int row, int column) {
-        if(boardStates[row][column] == BoardState.EMPTY){
-            boardStates[row][column] = currentPlayer;
-            checkGameStatus();
-            currentPlayer = (currentPlayer == BoardState.X) ? BoardState.O : BoardState.X;
-        }else{
-            throw new InvalidMoveException("Invalid move! \n Try again.");
-
-        }
+    public BoardState[][] getBoardSurface(){
+        return boardSurface;
+    }
+    
+    public boolean isWinner(){
+        if(isWinnerRowZero())
+            return true;
+        else if (isWinnerRowOne())
+            return true;
+        else if (isWinnerRowTwo())
+            return true;
+        else if (isWinnerColumnZero())
+            return true;
+        else if (isWinnerColumnOne())
+            return true;
+        else if (isWinnerColumnTwo())
+            return true;
+        else if (isWinnerForwardDiagonal())
+            return true;
+        else if (isWinnerBackwardDiagonal())
+            return true;
+        return false;
+        
     }
 
-    public String getGameStatus() {
-        for (int i = 0; i < 3; i++) {
-            if ((boardStates[i][0] == boardStates[i][1] && boardStates[i][1] == boardStates[i][2] && boardStates[i][0] != BoardState.EMPTY) ||
-               (boardStates[0][i] == boardStates[1][i] && boardStates[1][i] == boardStates[2][i] && boardStates[0][i] != BoardState.EMPTY)) {
-                return "Player " + (boardStates[i][0] == BoardState.X ? "X" : "O") + " wins!";
-            }
-        }
-        if ((boardStates[0][0] == boardStates[1][1] && boardStates[1][1] == boardStates[2][2] && boardStates[0][0] != BoardState.EMPTY) ||
-                (boardStates[0][2] == boardStates[1][1] && boardStates[1][1] == boardStates[2][0] && boardStates[0][2] != BoardState.EMPTY)) {
-                 return "Player " + (boardStates[1][1] == BoardState.X ? "X" : "O") + " wins!";
-        }
-        if(checkForDraw()){
-            return "Its a draw!";
-        }
-        else {
-            return "Game still in progress...";
-        }
+    private boolean isWinnerRowZero() {
+        boolean isX = boardSurface[0][0] == X && boardSurface[0][1] == X && boardSurface[0][2] == X;
+        boolean isO = boardSurface[0][0] == O && boardSurface[0][1] == O && boardSurface[0][2] == O;
+        return isX || isO;
     }
-    private boolean checkForDraw() {
-        boolean isDraw = false;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (boardStates[i][j] == BoardState.EMPTY) {
-                   return true;
-                }
+
+    private boolean isWinnerRowOne() {
+        boolean isX = boardSurface[1][0] == X && boardSurface[1][1] == X && boardSurface[1][2] == X;
+        boolean isO = boardSurface[1][0] == O && boardSurface[1][1] == O && boardSurface[1][2] == O;
+        return isX || isO;
+
+    }
+
+    private boolean isWinnerRowTwo() {
+        boolean isX = boardSurface[2][0] == X && boardSurface[2][1] == X && boardSurface[2][2] == X;
+        boolean isO = boardSurface[2][0] == O && boardSurface[2][1] == O && boardSurface[2][2] == O;
+        return isX || isO;
+    }
+
+    private boolean isWinnerColumnZero() {
+        boolean isX = boardSurface[0][0] == X && boardSurface[1][0] == X && boardSurface[2][0] == X;
+        boolean isO = boardSurface[0][0] == O && boardSurface[1][0] == O && boardSurface[2][0] == O;
+        return isX || isO;
+    }
+
+    private boolean isWinnerColumnOne() {
+        boolean isX = boardSurface[0][1] == X && boardSurface[1][1] == X && boardSurface[2][1] == X;
+        boolean isO = boardSurface[0][1] == O && boardSurface[1][1] == O && boardSurface[2][1] == O;
+        return isX || isO;
+    }
+
+    private boolean isWinnerColumnTwo() {
+        boolean isX = boardSurface[0][2] == X && boardSurface[1][2] == X && boardSurface[2][2] == X;
+        boolean isO = boardSurface[0][2] == O && boardSurface[1][2] == O && boardSurface[2][2] == O;
+        return isX || isO;
+    }
+
+    private boolean isWinnerForwardDiagonal() {
+        boolean isX = boardSurface[0][0] == X && boardSurface[1][1] == X && boardSurface[2][2] == X;
+        boolean isO = boardSurface[0][0] == O && boardSurface[1][1] == O && boardSurface[2][2] == O;
+        return isX || isO;
+    }
+
+    private boolean isWinnerBackwardDiagonal() {
+        boolean isX = boardSurface[0][2] == X && boardSurface[1][1] == X && boardSurface[2][0] == X;
+        boolean isO = boardSurface[0][2] == O && boardSurface[1][1] == O && boardSurface[2][0] == O;
+        return isX || isO;
+    }
+    public boolean isATie(){
+        return !checkIsTie() && !isWinner();
+    }
+
+    private boolean checkIsTie() {
+        for(BoardState[] boardStates : boardSurface){
+            for(int i = 0; i < boardSurface.length; i++){
+                if (boardStates[i] == EMPTY)
+                    return true;
             }
         }
         return false;
-    }
 
-    private void checkGameStatus() {
-        String status = getGameStatus();
-        if(!status.equals("Game still in progress...")){
-            System.out.println(status);
-        }
 
     }
-
-    boolean isValidMove(int row, int column) {
-        return row >= 0 && row < 3 && column >= 0 && column < 3;
-    }
-    public BoardState[][] getBoardStates(){
-        return boardStates;
-    }
-
 }

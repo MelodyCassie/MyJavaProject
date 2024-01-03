@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 import static TicTacToeGame.BoardState.O;
 import static TicTacToeGame.BoardState.X;
+import static java.lang.System.exit;
 
 public class GameMain {
     private static final GamePlayer gamePlayerOne = new GamePlayer(X,"PlayerOne");
@@ -14,11 +15,8 @@ public class GameMain {
 
     static Random random = new Random();
     private static final Scanner input = new Scanner(System.in);
-
-
     public static void main(String[] args) {
         startGame();
-
     }
     public static void startGame(){
         boardSurface();
@@ -38,19 +36,13 @@ public class GameMain {
             input.nextLine();
             startGame();
         }
-
         switch (notAllowed){
             case 1 -> playWithHuman();
             case 2 -> playWithComputer();
-            case 3 -> quit(3);
+            case 3 -> exit(3);
             default -> startGame();
         }
     }
-
-    private static void quit(int i) {
-    }
-
-
     private static void playWithHuman() {
         gamePlayerOneMove();
         gamePlayerTwoMove();
@@ -82,8 +74,6 @@ public class GameMain {
         input.nextLine();
         gamePlayerOneMove();
     }
-
-
     private static void gamePlayerTwoMove(){
         display("Player Two choose your position: ");
          try {
@@ -103,7 +93,6 @@ public class GameMain {
         input.nextLine();
         gamePlayerTwoMove();
     }
-
     private static void computerMove() {
         display("Computer Position Selected");
         try {
@@ -121,21 +110,17 @@ public class GameMain {
         display("Enter a valid digit ");
         computerMove();
     }
-
     private static void winnerDisplay(String display) {
         if(ticTacToeBoard.isWinner()) {
             display(display);
-            quit(3);
-
+            exit(3);
         }
         if(ticTacToeBoard.isATie()) {
             display("Its a tie! ");
             display("Restart ");
-            quit(3);
+            exit(3);
         }
     }
-
-
     private static void boardSurface() {
         ticTacToeBoard.displayBoardSurface();
     }
@@ -143,7 +128,4 @@ public class GameMain {
     private static void display(String display) {
         System.out.println(display);
     }
-
-
-
 }

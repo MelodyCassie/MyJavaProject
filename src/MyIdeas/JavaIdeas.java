@@ -15,8 +15,4 @@ public class JavaIdeas {
         System.out.println(new SecureRandom().nextInt(1,10));
     }
 
-
-
-
-
 }

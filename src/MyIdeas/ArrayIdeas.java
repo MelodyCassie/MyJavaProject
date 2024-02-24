@@ -9,11 +9,9 @@ public class ArrayIdeas {
         int[] frequency = new int[7];
         //This line declares an integer array named frequency with a length of 7.
         // This array will be used to count the frequency of each face when rolling a die.
-
         final int ARRAY_LENGTH = 10; //declares a constant named ARRAY_LENGTH with a value
         // of 10. The final keyword means that the value of this variable cannot be
         // changed; it's a constant.
-
         int[] array = new int[ARRAY_LENGTH]; //creates an integer array named
        // array with a length specified by the ARRAY_LENGTH constant. In this case, the
         // array will have 10 elements.
@@ -29,10 +27,6 @@ public class ArrayIdeas {
         //array[1] will be 2 + 2 * 1, which is 4.
        // array[2] will be 2 + 2 * 2, which is 6.
         //And so on, until array[9] is set to 2 + 2 * 9, which is 20.
-
-
-
-
     }
     public static int[] dominateNumber (int[] array){
         ArrayList<Integer> numbs = new ArrayList<>();
@@ -70,13 +64,12 @@ public class ArrayIdeas {
                 //If the condition in the previous line is true, this line adds the current element at index i to the numbs ArrayList.
                 // This element is considered "dominant" because it's greater than the expected number of elements that follow it and
                 // are smaller.
-
-
-
             }
              //In summary, this code identifies "dominant" elements in an array, which are elements that are greater than the number of
             // elements that come after them. These dominant elements are added to the numbs ArrayList.
         }
+
+        //CONVERT TO ARRAY===========================
         // this below part is a function for transitioning your result to an array form
         //This part of the code is responsible for converting an ArrayList (numbs) to
         // a regular array
@@ -112,12 +105,7 @@ public class ArrayIdeas {
 
 
 
-
-
-
-
-
-
+    //FIND LARGEST , SECOND LARGEST===============
 //While Integer.MIN_VALUE is a common choice for initializing secondLargest because it's a well-understood constant for
     // integers, you can use other values as well depending on the specific requirements of your code. Here are a few
     // alternatives:
@@ -135,7 +123,7 @@ public class ArrayIdeas {
 
 
 
-///Used to shuffle an array of numbers
+//SHUFFLING AN ARRAY OF NUMS========================
     public class FisherYatesShuffle {
         public static void fisherYatesShuffle(int[] arr) {
             Random random = new Random();
@@ -156,6 +144,7 @@ public class ArrayIdeas {
         }
     }
 
+    //BUBBLE SORT
     // public static int[] bubbleSort(int[] numbers) {
     //Here, you define the bubbleSort method, which takes an array of integers as input and returns an array of integers.
     //        int n = numbers.length;
@@ -187,5 +176,21 @@ public class ArrayIdeas {
     //This line returns the sorted array as the result of the bubbleSort method.
 
 
+    //METHOD TO SHIFT AN ARRAY BY ONE
+    //public static void shiftArray(int[] arr) {
+    //        if (arr.length > 0) {
+    //            int lastElement = arr[arr.length - 1];
+    //            for (int i = arr.length - 1; i > 0; i--) {
+    //                arr[i] = arr[i - 1];
+    //            }
+    //            arr[0] = lastElement;
+    //        }
+
+    //INPUT HOW MANY TIMES I WANT TO SHIFT MY ARRAY LIKE THIS
+    // public static void shiftArray(int[] arr, int times) {
+    //        for (int i = 0; i < times; i++) {
+    //            shiftArray(arr);
+    //        }
+    //    }
 
 }
